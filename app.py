@@ -75,7 +75,7 @@ def countdown():
     left = (TARGET - now).total_seconds()
 
     if left <= 0:
-        st.success("Polls are open. The countdown has reached zero.")
+        st.success("Election day! Polls are open. Vote Early. Vote if it count.")
         return
 
     # Earth: standard days / hours / minutes / seconds
