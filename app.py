@@ -9,7 +9,7 @@ import streamlit as st
 
 import moon
 
-st.set_page_config(page_title="Election Night", page_icon="🗳️", layout="centered")
+st.set_page_config(page_title="BOOKER PRIZE 2026", page_icon="🗳️", layout="centered")
 
 st.markdown(
     """
@@ -33,7 +33,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-st.markdown('<div class="title">🗳️ ELECTION NIGHT</div>', unsafe_allow_html=True)
+st.markdown('<div class="title">🗳️ BOOKER PRIZE CELEBRATION</div>', unsafe_allow_html=True)
 
 # ---- Settings -------------------------------------------------------------
 with st.sidebar:
@@ -47,7 +47,7 @@ with st.sidebar:
     target_time = st.time_input("Target time on Nov 3", value=dtime(0, 0))
 
 tz = timezone(timedelta(hours=-4), "EDT") if fixed_edt else ZoneInfo("America/New_York")
-TARGET = datetime(2026, 11, 3, target_time.hour, target_time.minute, tzinfo=tz)
+TARGET = datetime(2026, 11, 9, target_time.hour, target_time.minute, tzinfo=tz)
 
 st.markdown(
     f'<div class="sub">Counting down to {TARGET:%A, %B %-d, %Y, %-I:%M %p} {TARGET.tzname()}'
@@ -75,7 +75,7 @@ def countdown():
     left = (TARGET - now).total_seconds()
 
     if left <= 0:
-        st.success("Election day! Polls are open. Vote Early. Vote if it count.")
+        st.success("BOOKER PRIZE ANNOUNCING. NEW MIND, NEW HORIZON. NEW ON SHELF. CONGRATULATION TO ALL SHORTLISTED AND THE WINNER")
         return
 
     # Earth: standard days / hours / minutes / seconds
